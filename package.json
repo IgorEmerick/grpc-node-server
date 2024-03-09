@@ -1,0 +1,36 @@
+{
+  "name": "grpc-node-server",
+  "version": "1.0.0",
+  "description": "A NodeJS gRPC server example.",
+  "main": "./dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "ts-node-dev --inspect --transpile-only --ignore-watch node_modules --respawn src/index.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IgorEmerick/grpc-node-server.git"
+  },
+  "keywords": [
+    "Node",
+    "gRPC",
+    "Server"
+  ],
+  "author": "Igor Emerick <igorbarbosaemerick@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IgorEmerick/grpc-node-server/issues"
+  },
+  "homepage": "https://github.com/IgorEmerick/grpc-node-server#readme",
+  "devDependencies": {
+    "@rocketseat/eslint-config": "^2.2.2",
+    "@types/node": "^20.11.25",
+    "eslint": "^8.57.0",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.4.2"
+  },
+  "dependencies": {
+    "@grpc/grpc-js": "^1.10.1",
+    "@grpc/proto-loader": "^0.7.10"
+  }
+}
