@@ -7,7 +7,7 @@
     "removeComments": true,
     "sourceMap": true,
     "target": "ES2022",
-    "outDir": "lib",
+    "outDir": "dist",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true
   },

@@ -17,8 +17,8 @@ message RpcRequest {
 }
 
 message RpcResponse {
-  string requestName = 1;
-  int32 requestInteger = 2;
-  bool requestBoolean = 3;
-  float requestFloating = 4;
+  string responseName = 1;
+  int32 responseInteger = 2;
+  bool responseBoolean = 3;
+  float responseFloating = 4;
 }

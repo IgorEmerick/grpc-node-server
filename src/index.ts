@@ -24,10 +24,10 @@ function simpleRpc(call, callback): void {
   console.log(call.request);
 
   callback(null, {
-    requestName: `response ${call.request.requestName}`,
-    requestInteger: call.request.requestInteger + 1,
-    requestBoolean: !call.request.requestBoolean,
-    requestFloating: call.request.requestFloating + 0.5,
+    responseName: `response ${call.request.requestName}`,
+    responseInteger: call.request.requestInteger + 1,
+    responseBoolean: !call.request.requestBoolean,
+    responseFloating: call.request.requestFloating + 0.5,
   });
 }
 
@@ -36,10 +36,10 @@ function serverSideRpcStreaming(call): void {
 
   for (let i = 0; i < 2; i++) {
     call.write({
-      requestName: `response ${call.request.requestName}`,
-      requestInteger: i,
-      requestBoolean: !call.request.requestBoolean,
-      requestFloating: i + 0.5,
+      responseName: `response ${call.request.requestName}`,
+      responseInteger: i,
+      responseBoolean: !call.request.requestBoolean,
+      responseFloating: i + 0.5,
     });
   }
 
@@ -57,10 +57,10 @@ function clientSideRpcStreaming(call, callback): void {
 
   call.on('end', () =>
     callback(null, {
-      requestName: `response ${dataset[0].requestName}`,
-      requestInteger: dataset[0].requestInteger + 1,
-      requestBoolean: !dataset[0].requestBoolean,
-      requestFloating: dataset[0].requestFloating + 0.5,
+      responseName: `response ${dataset[0].requestName}`,
+      responseInteger: dataset[0].requestInteger + 1,
+      responseBoolean: !dataset[0].requestBoolean,
+      responseFloating: dataset[0].requestFloating + 0.5,
     }),
   );
 }
@@ -70,10 +70,10 @@ function bidirectionalRpcStreaming(call): void {
     console.log(data);
 
     call.write({
-      requestName: `response ${data.requestName}`,
-      requestInteger: data.requestInteger + 1,
-      requestBoolean: !data.requestBoolean,
-      requestFloating: data.requestFloating + 0.5,
+      responseName: `response ${data.requestName}`,
+      responseInteger: data.requestInteger + 1,
+      responseBoolean: !data.requestBoolean,
+      responseFloating: data.requestFloating + 0.5,
     });
   });
 
